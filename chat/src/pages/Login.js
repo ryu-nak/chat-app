@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import { Redirect } from 'react-router-dom' //react-router-domを利用してRedirectを読み込む
 import { AuthContext } from '../AuthService'
-import firebase from '../config/firebase'
-import { Redirect } from 'react-router-dom'//react-router-domを利用してRedirectを読み込む
+import firebase from '../config/Firebase'
 
 const Login = ({ history }) => {
         //Routeコンポーネントによって与えられるprops history を分割代入する
@@ -33,24 +33,30 @@ const Login = ({ history }) => {
             <h1>Login</h1>        
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor='email'>E-mail</label>
+                    <label htmlFor='email'>メールアドレス</label>
                     <input 
                         type='email' 
                         id='email' 
                         name='email' 
-                        placeholder='email'
+                        placeholder='アドレス'
+                        onChange={e => {
+                            setEmail(e.target.value)
+                        }}
                     />
                 </div>
                 <div>
-                    <label htmlFor='password'>Password</label>
+                    <label htmlFor='password'>パスワード</label>
                     <input 
                         type='password' 
                         id='password' 
                         name='password'
-                        placeholder='password' 
+                        placeholder='パスワード' 
+                        onChange={e => {
+                            setPassword(e.target.value)
+                        }}
                     />
                 </div>
-                <button type='submit'>Login</button>
+                <button type='submit'>ログイン</button>
             </form>
         </>
     )

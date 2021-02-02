@@ -1,3 +1,23 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.ignoreWords": [
+        "a",
+        "appspot",
+        "c",
+        "czs",
+        "firebaseapp",
+        "firestore",
+        "gz",
+        "iza",
+        "j",
+        "ly",
+        "oa",
+        "oqj",
+        "p",
+        "q",
+        "sy",
+        "t",
+        "uqklu",
+        "xs"
+    ]
 }
